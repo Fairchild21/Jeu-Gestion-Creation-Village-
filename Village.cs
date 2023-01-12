@@ -6,10 +6,16 @@ public class Village
     }
     private Ressources myRessources;
 
+      public House chefHome;
+      private int villageois = 0;
+
+
     public Village()
     {
         this.name = name;
         this.myRessources = new Ressources();
+        this.chefHome = new House();
+        this.villageois = House.villageois;
     }
 
     public string getName()
