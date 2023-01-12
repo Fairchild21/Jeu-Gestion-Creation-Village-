@@ -1,0 +1,15 @@
+D:\TP Validation Acquis\bin\Debug\net7.0\TP Validation Acquis.exe
+D:\TP Validation Acquis\bin\Debug\net7.0\TP Validation Acquis.deps.json
+D:\TP Validation Acquis\bin\Debug\net7.0\TP Validation Acquis.runtimeconfig.json
+D:\TP Validation Acquis\bin\Debug\net7.0\TP Validation Acquis.dll
+D:\TP Validation Acquis\bin\Debug\net7.0\TP Validation Acquis.pdb
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.csproj.AssemblyReference.cache
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.GeneratedMSBuildEditorConfig.editorconfig
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.AssemblyInfoInputs.cache
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.AssemblyInfo.cs
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.csproj.CoreCompileInputs.cache
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.dll
+D:\TP Validation Acquis\obj\Debug\net7.0\refint\TP Validation Acquis.dll
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.pdb
+D:\TP Validation Acquis\obj\Debug\net7.0\TP Validation Acquis.genruntimeconfig.cache
+D:\TP Validation Acquis\obj\Debug\net7.0\ref\TP Validation Acquis.dll
