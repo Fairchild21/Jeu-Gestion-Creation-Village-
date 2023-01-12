@@ -12,6 +12,7 @@ public class Village
 
     public House[] listHouse;  
     
+    public Mine mine;
 
     public Village(string name)
     {
@@ -21,6 +22,7 @@ public class Village
         this.villageois = House.villageois;
         this.listHouse = new House[1];
         this.listHouse[0] = chefHome;
+        this.mine = new Mine();
         
     }
 
@@ -59,5 +61,29 @@ public class Village
        listHouse = newTab; 
        this.villageois = listHouse.Length * House.villageois;
         
+    }
+
+    public void mineStone( int nbrVillageois)
+    {
+        // nbrVillageois -= Mine.stone_cost;
+        // mineStone par nbrVillageois consomme 2 Stone, 1 wood et rapporte 8 gain_stone
+        
+        if (nbrVillageois > this.villageois)
+        {
+            System.Console.WriteLine("Pas assez de villageois! " + villageois + " villageois disponible");
+        }
+        else if (Mine.stone_cost * nbrVillageois > myRessources.getStone() || Mine.wood_cost * nbrVillageois > myRessources.getWood())
+        {
+            System.Console.WriteLine("Ressources insuffisantes !");
+        }
+        else{
+            myRessources.useStone(Mine.stone_cost * nbrVillageois);
+            myRessources.useWood(Mine.wood_cost * nbrVillageois);
+            myRessources.addStone(mine.mineStone(nbrVillageois));
+        }
+
+
+        
+
     }
 }    
