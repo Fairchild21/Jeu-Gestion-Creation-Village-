@@ -1,13 +1,13 @@
 public class Ressources
 {
-    private int woods{
-        get {return woods;}
-        set { woods = value;}
-    }
-    private int stones{
-        get {return stones;}
-        set { stones = value;}
-    }
+    private int woods;//{
+    //     get {return woods;}
+    //     set { woods = value;}
+    // }
+    private int stones;//{
+    //     get {return stones;}
+    //     set { stones = value;}
+    // }
 
     public int getWood()
     {
@@ -21,7 +21,7 @@ public class Ressources
 
     public void useWood(int nbr)
     {
-        if (stones < nbr)
+        if (woods < nbr)
         {
             System.Console.WriteLine("Quantité insuffisante");
             return;
