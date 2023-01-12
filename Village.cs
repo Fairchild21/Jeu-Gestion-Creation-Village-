@@ -14,6 +14,8 @@ public class Village
     
     public Mine mine;
 
+    public Forest forest;
+
     public Village(string name)
     {
         this.name = name;
@@ -23,6 +25,7 @@ public class Village
         this.listHouse = new House[1];
         this.listHouse[0] = chefHome;
         this.mine = new Mine();
+        this.forest = new Forest();
         
     }
 
@@ -80,10 +83,23 @@ public class Village
             myRessources.useStone(Mine.stone_cost * nbrVillageois);
             myRessources.useWood(Mine.wood_cost * nbrVillageois);
             myRessources.addStone(mine.mineStone(nbrVillageois));
+        }    
+    }
+
+    public void cutWood(int nbrVillageois)
+    {
+        if (nbrVillageois > this.villageois)
+        {
+            System.Console.WriteLine("Villageois requis");
         }
-
-
-        
-
+        else if (Forest.stone_cost * nbrVillageois > myRessources.getWood() || Forest.wood_cost * nbrVillageois > myRessources.getWood())
+        {
+            System.Console.WriteLine("Ressources insuffisantes !");
+        }
+        else{
+            myRessources.useStone(Forest.stone_cost * nbrVillageois);
+            myRessources.useWood(Forest.wood_cost * nbrVillageois);
+            
+        }
     }
 }    

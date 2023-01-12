@@ -49,4 +49,9 @@ public class Ressources
     {
         stones += nbr;
     }
+
+    public void addWood(int nbr)
+    {
+        woods +=nbr;
+    }
 }
