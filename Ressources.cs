@@ -69,12 +69,11 @@ public class Ressources
     {
         if (getWood() >= wood_max * 80 / 100 || getStone() >= stone_max * 80 / 100)
         {
-            // wood_max = wood_max * 80 / 100;
-            // stone_max = stone_max * 80 / 100;
-            
+            woods -= (int)(wood_max *0.8);
+            stones -= (int)(stone_max * 0.8);            
             wood_max = wood_max *= 2;
             stone_max = stone_max *= 2;
-            //level ++;
+            level ++;
             System.Console.WriteLine("Upgrade!");
         }
         else

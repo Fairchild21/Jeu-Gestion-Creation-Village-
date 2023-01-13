@@ -134,4 +134,5 @@ public class Village
             myRessources.addWood(1);
         }
     }
+
 }    
