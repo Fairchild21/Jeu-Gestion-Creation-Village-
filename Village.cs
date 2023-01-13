@@ -104,7 +104,7 @@ public class Village
 
     public void buildHouse(int nbrHouse)
     {
-         if ( House.wood_needed * villageois > myRessources.getWood() || House.stone_needed * villageois > getStone())
+         if ( House.wood_needed * nbrHouse > myRessources.getWood() || House.stone_needed * nbrHouse > getStone())
         {
             System.Console.WriteLine("Ressources insuffisantes !");
         }
@@ -116,6 +116,22 @@ public class Village
                 myRessources.useWood(House.wood_needed);
                 addHouse(new House());
             }
+        }
+    }
+
+
+    public void upgradeRessources()
+    {
+        myRessources.upgrade();
+        myRessources.level ++;
+    }
+
+    public void lookAround()
+    {
+        if (myRessources.level >= 1)
+        {
+            myRessources.addStone(1);
+            myRessources.addWood(1);
         }
     }
 }    

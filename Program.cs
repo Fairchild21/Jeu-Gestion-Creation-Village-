@@ -66,3 +66,33 @@ myVillage.mineStone(15); // affiche Il n'y a pas assez de ressources
 Console.WriteLine(myVillage.getWood()); // affiche 187
 Console.WriteLine(myVillage.getStone()); // affiche 10
 myVillage.buildHouse(4); // affiche Il n'y a pas assez de ressources
+// myVillage.lookAround();
+System.Console.WriteLine(myVillage.getStone());
+
+myVillage.cutWood(15);
+myVillage.mineStone(5);
+Console.WriteLine(myVillage.getWood()); 
+Console.WriteLine(myVillage.getStone());
+
+myVillage.cutWood(10);
+myVillage.mineStone(20);
+Console.WriteLine(myVillage.getWood()); 
+Console.WriteLine(myVillage.getStone());
+
+myVillage.cutWood(2);
+myVillage.mineStone(15);
+Console.WriteLine(myVillage.getWood()); 
+Console.WriteLine(myVillage.getStone());
+
+myVillage.cutWood(0);
+myVillage.mineStone(11);
+myVillage.mineStone(19);
+myVillage.cutWood(4);
+Console.WriteLine(myVillage.getWood()); 
+Console.WriteLine(myVillage.getStone());
+
+myVillage.upgradeRessources();
+myVillage.lookAround();
+System.Console.WriteLine(myVillage.getStone());
+
+

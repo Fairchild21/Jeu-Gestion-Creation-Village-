@@ -1,13 +1,10 @@
 public class Ressources
 {
-    private int woods;//{
-    //     get {return woods;}
-    //     set { woods = value;}
-    // }
-    private int stones;//{
-    //     get {return stones;}
-    //     set { stones = value;}
-    // }
+    private int woods;
+    private int stones;   
+    public int level;
+    private int wood_max;
+    private int stone_max;
 
     public int getWood()
     {
@@ -41,17 +38,48 @@ public class Ressources
 
     public Ressources()
     {
-        woods = 10;
-        stones = 10;
+        this.woods = 10;
+        this.stones = 10;
+        this.level = 1;
+        this.wood_max = 250;
+        this.stone_max = 250;
     }
 
     public void addStone(int nbr)
     {
         stones += nbr;
+
+        if (getStone() > stone_max)
+        {
+            stones = stone_max;
+        }
     }
 
     public void addWood(int nbr)
     {
         woods +=nbr;
+
+        if (getWood() > wood_max)
+        {
+            woods = wood_max;
+        }
+    }
+
+    public void upgrade()
+    {
+        if (getWood() >= wood_max * 80 / 100 || getStone() >= stone_max * 80 / 100)
+        {
+            // wood_max = wood_max * 80 / 100;
+            // stone_max = stone_max * 80 / 100;
+            
+            wood_max = wood_max *= 2;
+            stone_max = stone_max *= 2;
+            //level ++;
+            System.Console.WriteLine("Upgrade!");
+        }
+        else
+        {
+            System.Console.WriteLine("Tu es pauvre !");
+        }
     }
 }
