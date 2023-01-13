@@ -42,7 +42,7 @@ public class Ressources
     public Ressources()
     {
         woods = 10;
-        stones =10;
+        stones = 10;
     }
 
     public void addStone(int nbr)

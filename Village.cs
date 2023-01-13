@@ -68,7 +68,6 @@ public class Village
 
     public void mineStone( int nbrVillageois)
     {
-        // nbrVillageois -= Mine.stone_cost;
         // mineStone par nbrVillageois consomme 2 Stone, 1 wood et rapporte 8 gain_stone
         
         if (nbrVillageois > this.villageois)
@@ -100,6 +99,23 @@ public class Village
             myRessources.useStone(Forest.stone_cost * nbrVillageois);
             myRessources.useWood(Forest.wood_cost * nbrVillageois);
             myRessources.addWood(forest.cutWood(nbrVillageois));
+        }
+    }
+
+    public void buildHouse(int nbrHouse)
+    {
+         if ( House.wood_needed * villageois > myRessources.getWood() || House.stone_needed * villageois > getStone())
+        {
+            System.Console.WriteLine("Ressources insuffisantes !");
+        }
+        else // on va boucler sur addHouse à chaque fois qu'on utilise buildHouse
+        {
+            for ( int i = 0; i < nbrHouse; i++)
+            {
+                myRessources.useStone(House.stone_needed);
+                myRessources.useWood(House.wood_needed);
+                addHouse(new House());
+            }
         }
     }
 }    
