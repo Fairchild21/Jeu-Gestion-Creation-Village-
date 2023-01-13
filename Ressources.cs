@@ -67,9 +67,9 @@ public class Ressources
 
     public void upgrade()
     {
-        if (getWood() >= wood_max * 80 / 100 || getStone() >= stone_max * 80 / 100)
+        if (getWood() >= wood_max * 80 / 100 && getStone() >= stone_max * 80 / 100)
         {
-            woods -= (int)(wood_max *0.8);
+            woods -= (int)(wood_max * 0.8); // cast redéfinition du type en int
             stones -= (int)(stone_max * 0.8);            
             wood_max = wood_max *= 2;
             stone_max = stone_max *= 2;
