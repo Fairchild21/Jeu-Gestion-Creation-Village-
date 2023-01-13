@@ -92,14 +92,14 @@ public class Village
         {
             System.Console.WriteLine("Villageois requis");
         }
-        else if (Forest.stone_cost * nbrVillageois > myRessources.getWood() || Forest.wood_cost * nbrVillageois > myRessources.getWood())
+        else if (Forest.stone_cost * nbrVillageois > myRessources.getStone() || Forest.wood_cost * nbrVillageois > myRessources.getWood())
         {
             System.Console.WriteLine("Ressources insuffisantes !");
         }
         else{
             myRessources.useStone(Forest.stone_cost * nbrVillageois);
             myRessources.useWood(Forest.wood_cost * nbrVillageois);
-            
+            myRessources.addWood(forest.cutWood(nbrVillageois));
         }
     }
 }    
